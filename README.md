@@ -27,7 +27,7 @@ Sesuai ketentuan template pembagian peran pada dokumen UAS (Kelompok 3-4 Anggota
 
 | Nama Mahasiswa | NIM | Peran Utama | Tanggung Jawab Master & Transaksi | Bagian yang Dikerjakan |
 |---|---|---|---|---|
-| **Helga Dianova Ardhani (Ketua)** | 230101001 | Lead Developer & Backend Auth | **M1 (Obat)**<br>**T1 (Pengajuan)**, **T2 (Persetujuan)** | Pengelolaan Git repository, struktur branch, autentikasi login/register/logout, skema RBAC (tabel `roles`, middleware `RoleMiddleware`), seeder akun, Resource Controller Obat (M1), serta alur status dua role janji temu (T1 & T2). |
+| **Helga Dianova Ardhani (Ketua)** | 434251119 | Lead Developer & Backend Auth | **M1 (Obat)**<br>**T1 (Pengajuan)**, **T2 (Persetujuan)** | Pengelolaan Git repository, struktur branch, autentikasi login/register/logout, skema RBAC (tabel `roles`, middleware `RoleMiddleware`), seeder akun, Resource Controller Obat (M1), serta alur status dua role janji temu (T1 & T2). |
 | **Anggota 2** | 230101002 | UI/UX & Transaction Engineer | **M2 (Kategori Obat)**<br>**T3 (Rekam Medis)**, **T4 (Restock)** | Layout terpusat Blade (`app.blade.php`), halaman katalog Guest, dashboard Role 1 & Role 2, Resource Controller Kategori Obat (M2), implementasi Header-Detail `DB::transaction()` rekam medis (T3) pemotong stok obat, serta form restock penambah stok obat (T4). |
 | **Anggota 3** | 230101003 | Database & QA Engineer | **M3 (Layanan)**<br>**T5 (Pembayaran & Laporan)** | Resource Controller Layanan Klinik (M3), perancangan ERD database PostgreSQL, pengujian otomatis PHPUnit Feature Tests, implementasi Query Builder untuk laporan rekap pendapatan & obat (T5), modul Docker containerization, serta dokumentasi README. |
 
