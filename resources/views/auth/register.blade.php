@@ -21,7 +21,7 @@
                     <label for="name" class="block text-sm font-semibold text-slate-700 mb-1">Nama Lengkap <span class="text-rose-500">*</span></label>
                     <input type="text" name="name" id="name" value="{{ old('name') }}" required
                         class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-sm transition"
-                        placeholder="Contoh: Ahmad Rizki">
+                        placeholder="Contoh: Helga Dianova Ardhani">
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
