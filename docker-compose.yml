@@ -1,0 +1,58 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pawcare_app
+    restart: unless-stopped
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+    environment:
+      DB_CONNECTION: pgsql
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_DATABASE: pawcare_clinic
+      DB_USERNAME: postgres
+      DB_PASSWORD: password123
+    depends_on:
+      - db
+    networks:
+      - pawcare_network
+
+  web:
+    image: nginx:alpine
+    container_name: pawcare_nginx
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - app
+    networks:
+      - pawcare_network
+
+  db:
+    image: postgres:16-alpine
+    container_name: pawcare_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: pawcare_clinic
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password123
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - pawcare_network
+
+networks:
+  pawcare_network:
+    driver: bridge
+
+volumes:
+  pgdata:
+    driver: local
